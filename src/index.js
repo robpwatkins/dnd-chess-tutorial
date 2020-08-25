@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Knight from './components/Knight';
+import Square from './components/Square';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+<Square black>
+  <Knight />
+</Square>,
+document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
