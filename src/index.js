@@ -1,14 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Knight from './components/Knight';
-import Square from './components/Square';
+import Board from './components/Board';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-<Square black>
-  <Knight />
-</Square>,
+<Board knightPosition={[0, 0]} />,
 document.getElementById('root')
 );
 
