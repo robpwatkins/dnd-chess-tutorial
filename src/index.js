@@ -5,7 +5,7 @@ import Board from './components/Board';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-<Board knightPosition={[0, 0]} />,
+<Board knightPosition={[7, 4]} />,
 document.getElementById('root')
 );
 
