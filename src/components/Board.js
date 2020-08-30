@@ -9,14 +9,25 @@ function renderSquare(i, [knightX, knightY]) {
     const black = (x + y) % 2 === 1;
     const piece = isKnightHere ? <Knight /> : null;
 
-    return 
-
-const Board = () => {
     return (
-        <div>
-            <Square black>
-                <Knight />
-            </Square>
+        <div key={i} style={{ width: '12.5%', height: '12.5%' }}>
+            <Square black={black}>{piece}</Square>
+        </div>
+    )
+}
+
+const Board = ({ knightPosition }) => {
+    const squares = [];
+    for (let i = 0; i < 64; i++) {
+        squares.push(renderSquare(i, knightPosition))
+    }
+    return (
+        <div
+            style={{
+                width: '100%'
+            }}
+        >
+            {squares}
         </div>
     )
 }
