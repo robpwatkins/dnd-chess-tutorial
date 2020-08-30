@@ -5,8 +5,11 @@ import Knight from './Knight';
 function renderSquare(i, [knightX, knightY]) {
     const x = i % 8;
     const y = Math.floor(i / 8);
-    const isKnightHere
-}
+    const isKnightHere = x === knightX && y === knightY;
+    const black = (x + y) % 2 === 1;
+    const piece = isKnightHere ? <Knight /> : null;
+
+    return 
 
 const Board = () => {
     return (
